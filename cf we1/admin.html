@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css"/>
+</head>
+<body>
+   <!-- Navbar -->
+   <div id="navbar">
+    <h1><a href="admin.html">Admin</a></h1>
+    <h1><a href="product.html">Product</a></h1>
+  </div>
+
+    <form id="form" onsubmit="submitProduct(event)">
+        <h1>Admin</h1>
+        <h3>Name</h3>
+        <input type="text" id ="name" placeholder="Enter your name">
+        <h3>Category</h3>
+        <select id="category">
+            <option value="">Select category</option>
+            <option value="shoe">Shoe</option>
+            <option value="watch">watch</option>
+            <option value="dress">dress</option>
+            <option value="saree">saree</option>
+            <option value="grocery">grocery</option>
+            <option value="others">others</option>
+        </select>
+        <h3>Image Url</h3>
+        <input type="text" id = "image" placeholder="Enter image url">
+        <h3>Price</h3>
+        <input type="number" id = "price" placeholder="Enter Price">
+        <h3>Gender</h3>
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <h3>Sold</h3>
+        <select  id="sold">
+            <option value="false">False</option>
+            <option value="true">True</option>
+            
+        </select>
+        <br>
+        <input type="submit" id = "add">
+    </form>
+</body>
+</html>
+<script src="admin.js"></script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <link rel="stylesheet" href="common.css"/>
+    <style>
+     #container{
+        width:60%;
+        margin: 10% 7.5% 10% 7.5%;
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        gap:30px;
+        text-align:center;
+      }
+      #container>div{
+        border:1px solid black;
+        height:550px;
+      }
+      div>img{
+        width:300px;
+        height:55%;
+      }
+     
+    </style>
+   
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar">
+        <h1><a href="admin.html">Admin</a></h1>
+        <h1><a href="product.html">Product</a></h1>
+      </div>
+
+      <div id="product-counter">Total Products: 0</div>
+      
+    <div id="container">
+
+    </div>
+</body>
+</html>
+<script src="product.js"></script>
