@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function CustomArray(...args){
+        for(let i = 0; i<args.length; i++){
+            this[i] = args[i]
+        }
+        this.size = args.length;
+    }
+    CustomArray.prototype.push = function(item){
+        this[this.size] = item;
+        this.size++;
+        return this.size;
+    }
+    CustomArray.prototype.pop = function(){
+        if(this.size === 0){
+            return undefined;
+        }
+        const poppedValue = this[this.size-1];
+        this[this.size-1]
+        this.size--;
+        return poppedValue;
+    }
+    const arr = new CustomArray(10,20,30,40,50)
+    console.log(arr);
+    console.log(arr.size);
+    arr.push(1000);
+    console.log(arr);
+    const poppedValue = arr.pop();
+    console.log(poppedValue);
+    console.log(arr);
+
+    class  Vehicle{
+        constructor(w,b,n){
+            this.wheel = w;
+            this.brand = b;
+            this.name = n
+        }
+    }
+    let m1 = new Vehicle(2,"Mahindra","bike");
+    console.log(m1);
+    class Car extends Vehicle{
+        constructor(w,b,n,l,np){
+            super(w,b,n);
+            this.logo = l;
+            this.numberPlate = np;
+        }
+    }
+    let m2 = new Car(4,"Rolls Royce","car","rr",true);
+    console.log(m2)
+</script>
